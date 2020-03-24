@@ -1,8 +1,3 @@
-/**
- * @param {character[][]} grid
- * @return {number}
- */
-
 //iterate through the input
 //if we hit a 1 - check each neighbor of the current element we're on, and if it's a 1, change that to a different number
 //recursively check these neighbors if it's a 1 to get all it's potential 1/island neighbors, and change them to a 2.
