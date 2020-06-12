@@ -36,6 +36,7 @@ var minWindow = function (s, t) {
             //adding one here because needs to be inclusive
             if (right - left + 1 < minLength) {
                 minLength = right - left + 1;
+                //adding one here because it slices up until the second argument given
                 result = s.slice(left, right + 1);
             }
 
