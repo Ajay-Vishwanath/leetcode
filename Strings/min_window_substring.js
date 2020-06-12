@@ -40,6 +40,7 @@ var minWindow = function (s, t) {
                 result = s.slice(left, right + 1);
             }
 
+            //if we removed a character from t when reducing the substring
             if (++letterCount[chars.indexOf(leftChar)] > 0) {
                 --count
             }
