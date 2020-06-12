@@ -3,20 +3,20 @@ var minWindow = function (s, t) {
         return ""
     }
 
+    //adding all the possible keychars into a string
     let chars = "";
     for (var i = 32; i <= 126; i++) {
         chars += String.fromCharCode(i);
     }
 
-
+    //making an array with each index representing a keychar
     let letterCount = new Array(95).fill(0);
 
+    //counting how many times each keychar appears in t via the array.
     for (let i = 0; i < t.length; i++) {
         let char = t[i];
         letterCount[chars.indexOf(char)]++
     }
-
-    // console.log(letterCount)
 
     let left = 0;
     let count = 0;
@@ -29,9 +29,11 @@ var minWindow = function (s, t) {
             count++;
         }
 
+        //when all the chars that appear in t are within the substring
         while (count === t.length) {
             let leftChar = s[left];
 
+            //adding one here because needs to be inclusive
             if (right - left + 1 < minLength) {
                 minLength = right - left + 1;
                 result = s.slice(left, right + 1);
