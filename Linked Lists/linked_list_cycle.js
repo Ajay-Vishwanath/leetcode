@@ -11,6 +11,7 @@ var hasCycle = function (head) {
         }
     }
 
+    //reached the end of the linked list
     return false;
 };
 
