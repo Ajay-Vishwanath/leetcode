@@ -1,4 +1,5 @@
 var mergeTwoLists = function (l1, l2) {
+  //creating a placeholder node to add on to
   let newLinkedList = new ListNode(-1);
   let head = newLinkedList;
 
