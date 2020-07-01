@@ -5,9 +5,11 @@ var levelOrder = function (root) {
 
     const queue = [root];
 
+    //until the tree is empty
     while (queue.length > 0) {
         let size = queue.length;
         let currentLevel = [];
+        //until the current level is empty
         for (let i = 0; i < size; i++) {
             const node = queue.shift();
             if (node.left !== null) {
