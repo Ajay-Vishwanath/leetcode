@@ -9,7 +9,7 @@ var levelOrder = function (root) {
     while (queue.length > 0) {
         let size = queue.length;
         let currentLevel = [];
-        //until the current level is empty
+        //until the current level is empty, size gets reset every run through
         for (let i = 0; i < size; i++) {
             const node = queue.shift();
             if (node.left !== null) {
