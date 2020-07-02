@@ -22,5 +22,6 @@ var deserializeHelper = function (queue) {
     newNode.left = deserializeHelper(queue);
     newNode.right = deserializeHelper(queue);
 
+    //the last node to return will be the root when its right and left are finally resolved.
     return newNode
 }
