@@ -4,8 +4,10 @@ var cloneGraph = function (node) {
         return undefined;
     }
 
+    //queue contains original nodes of graph
     const queue = [node]
     const rootNode = new Node(node.val, [])
+    //hashmap tracks which new nodes we have made
     const hashMap = {};
     hashMap[node.val] = rootNode;
 
