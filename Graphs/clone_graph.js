@@ -20,6 +20,7 @@ var cloneGraph = function (node) {
                 hashMap[neighbor.val] = newNode
                 queue.push(neighbor)
             }
+            //happens in either case
             hashMap[currentNode.val].neighbors.push(hashMap[neighbor.val])
         }
     }
