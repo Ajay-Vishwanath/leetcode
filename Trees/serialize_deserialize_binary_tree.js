@@ -4,6 +4,7 @@ var serialize = function (root) {
     let left = serialize(root.left);
     let right = serialize(root.right);
 
+    //Preorder traversal
     return root.val.toString() + "," + left + "," + right
 };
 
