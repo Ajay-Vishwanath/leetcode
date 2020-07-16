@@ -1,6 +1,6 @@
 var kthSmallest = function (root, k) {
-    let preOrder = kthSmallestHelper(root);
-    return preOrder[k - 1];
+    let inOrder = kthSmallestHelper(root);
+    return inOrder[k - 1];
 };
 
 var kthSmallestHelper = function (root) {
