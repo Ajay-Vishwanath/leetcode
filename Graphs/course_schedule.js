@@ -1,7 +1,8 @@
 //topological sort solution
 var canFinish = function (numCourses, prerequisites) {
-  const prerequisiteCounter = new Array(numCourses).fill(0);
+  const prerequisiteCounter
 
+  //counts how many prerequisites each course needs
   for (let i = 0; i < prerequisites.length; i++) {
     const course = prerequisites[i][0];
     prerequisiteCounter[course]++;
@@ -9,6 +10,7 @@ var canFinish = function (numCourses, prerequisites) {
 
   let stack = [];
 
+  //pushes to the stack courses that don't need a prerequisite
   for (let i = 0; i < prerequisiteCounter.length; i++) {
     if (prerequisiteCounter[i] === 0) {
       stack.push(i);
@@ -22,6 +24,7 @@ var canFinish = function (numCourses, prerequisites) {
     counter++;
 
     for (let i = 0; i < prerequisites.length; i++) {
+      //that prerequisite course has now been taken
       if (prerequisites[i][1] === current) {
         prerequisiteCounter[prerequisites[i][0]]--;
         if (prerequisiteCounter[prerequisites[i][0]] === 0) {
@@ -31,5 +34,6 @@ var canFinish = function (numCourses, prerequisites) {
     }
   }
 
+  //you were able to take numcourses
   return counter === numCourses;
 };
