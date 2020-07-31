@@ -2,6 +2,7 @@ var hasCycle = function (head) {
     let slowRunner = head;
     let fastRunner = head;
 
+    //eventually they have to meet
     while (fastRunner && fastRunner.next) {
         slowRunner = slowRunner.next;
         fastRunner = fastRunner.next.next;
