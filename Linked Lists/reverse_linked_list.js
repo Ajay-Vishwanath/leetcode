@@ -22,6 +22,7 @@ reverseList = function (head) {
     return head;
   }
 
+  //reached the last node
   if (!head.next) {
     result = head;
     return head;
